@@ -5,6 +5,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="/project.css"> 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -41,15 +42,25 @@
           <p>Don't be a stranger! I'd love to hear from you and connect. Whether you have a question, a project idea, or just want to say hello, feel free to reach out. You can drop me a message through the contact link above, send me an email, or call me. I'm always open to new opportunities, collaborations, and conversations. Let's connect and make something amazing together!</p>
         </div>
         <div class="col">
-        <section>
-        <h4 class="bigger-h4">Image</h4>
-        <img src = https://logodix.com/logo/470392.png class="img-fluid" alt= "A Black Square with the letters HTML in White in the center of the square." >  
-        <p>This image was added for part of a previous assignment.</p>
-        </section>              
+          <section>
+            <h4 class="bigger-h4">Image</h4>
+            <img id="image" src="https://logodix.com/logo/470392.png" class="img-fluid" alt="A Black Square with the letters HTML in White in the center of the square.">
+            <button id="toggleButton"class="btn btn-outline-primary"> Toggle Image </button>
+            <p>This image was added for part of a previous assignment. Please Hide with the toggle button if you need.</p>
+        </section>             
         </div>
       </div>
     </div>
   </main>
+  <script>
+    $(document).ready(function() {
+        
+        $('#toggleButton').click(function() {
+            
+            $('#image').toggle();
+        });
+    });
+</script>
   <footer>
     <p><strong>&copy; 2023 Q's Website. All rights reserved.</strong></p>
   </footer>
